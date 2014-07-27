@@ -57,3 +57,5 @@ Section 2 - Code Book for Getting and Cleaning Data
 - /train - unzipped train files from the source
 - investigate.R - Initial check to confirm the content matches the description of the source data.
 - mergeTextFiles.R - Used to merge the /test, /train files into one file
+- allmerged.txt - merged data table with activity, subject, variables
+- smallmerged.txt - a very small subset of allmerged.txt (first four rows)
