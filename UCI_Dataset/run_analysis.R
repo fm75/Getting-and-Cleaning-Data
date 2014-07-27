@@ -82,8 +82,8 @@ aggregateMeasurements <- function (df)
   aggregated <- aggregate (df, 
                            by = list(df$Subject, df$Activity), 
                            FUN = mean, 
-                           na.action = na.omit)
-  aggregated
+                           na.rm = TRUE)
+  aggregated[, 3:83]
   }
 
   
@@ -91,10 +91,12 @@ aggregateMeasurements <- function (df)
 # merge test and train data
 merged <- mergeTextFiles  ()
 merged <- renameActivity (merged)
-print (head (merged))
+cat ('merged dimensions ')
+print (dim (merged))
 merged <- aggregateMeasurements (merged)
 
 tidy <- melt (merged, id = c ('Subject', 'Activity'))
+cat ('tidy dimensions ')
 print (dim(tidy))
 
 write.table (tidy, 'tidy.txt')
