@@ -63,3 +63,10 @@ Section 2 - Code Book for Getting and Cleaning Data
 - smallmerged.txt - a very small subset of allmerged.txt (first four rows)
 
 - **tidy_means.txt - The target independent data set for the project.**
+
+**Description of tidy data set**
+Four columns
+- Activity
+- Subject
+- Measurement
+- Normalized_value
