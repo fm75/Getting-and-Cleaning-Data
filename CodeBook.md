@@ -56,4 +56,4 @@ Section 2 - Code Book for Getting and Cleaning Data
 - /test - unzipped test files from the source 
 - /train - unzipped train files from the source
 - investigate.R - Initial check to confirm the content matches the description of the source data.
-- 
+- mergeTextFiles.R - Used to merge the /test, /train files into one file
