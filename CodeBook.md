@@ -44,4 +44,16 @@ The following files are available for the train and test data. Their description
 
 Section 2 - Code Book for Getting and Cleaning Data
 ---------------------------------------------------
+**Organization** 
 
+/ (repo root directory)
+- Codebook.md - this file
+- README.md - description of work
+- download_project_files.R - used to download the source data
+
+
+/UCI_Dataset
+- /test - unzipped test files from the source 
+- /train - unzipped train files from the source
+- investigate.R - Initial check to confirm the content matches the description of the source data.
+- 
