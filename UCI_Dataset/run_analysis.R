@@ -99,5 +99,5 @@ tidy <- melt (merged, id = c ('Subject', 'Activity'))
 cat ('tidy dimensions ')
 print (dim(tidy))
 
-write.table (tidy, 'tidy.txt')
+write.table (tidy, 'tidy_means.txt', row.names = FALSE)
 
