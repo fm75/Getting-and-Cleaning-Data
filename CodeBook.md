@@ -53,9 +53,13 @@ Section 2 - Code Book for Getting and Cleaning Data
 
 
 /UCI_Dataset
-- /test - unzipped test files from the source 
-- /train - unzipped train files from the source
 - investigate.R - Initial check to confirm the content matches the description of the source data.
 - mergeTextFiles.R - Used to merge the /test, /train files into one file
+-run_analysis.R - merge, name activities, relable measurements, aggregate, and reshape into a tidy data set.
+
+- /test - unzipped test files from the source 
+- /train - unzipped train files from the source
 - allmerged.txt - merged data table with activity, subject, variables
 - smallmerged.txt - a very small subset of allmerged.txt (first four rows)
+
+- tidy_means.txt - The target independent data set for the project.
