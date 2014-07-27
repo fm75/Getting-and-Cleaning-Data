@@ -54,7 +54,7 @@ retitle <- function (colnames)
     {
     colnames <- gsub (renames[i,1], renames[i,2], colnames)
     }
-  c ('activity', 'subject', colnames)
+  c (colnames)
   }
 
 getActivityNames <- function (filename)
@@ -83,7 +83,11 @@ aggregateMeasurements <- function (df)
                            by = list(df$Subject, df$Activity), 
                            FUN = mean, 
                            na.rm = TRUE)
-  aggregated[, 3:83]
+  #print (colnames(aggregated))
+  #print (head (aggregated),3)
+  colnames(aggregated)[1] <- 'Subject'
+  colnames(aggregated)[2] <- 'Activity'
+  aggregated[, c(1,2,5:83)]
   }
 
   
@@ -91,13 +95,10 @@ aggregateMeasurements <- function (df)
 # merge test and train data
 merged <- mergeTextFiles  ()
 merged <- renameActivity (merged)
-cat ('merged dimensions ')
-print (dim (merged))
+colnames(merged) <- retitle (colnames(merged))
 merged <- aggregateMeasurements (merged)
 
 tidy <- melt (merged, id = c ('Subject', 'Activity'))
-cat ('tidy dimensions ')
-print (dim(tidy))
 
 write.table (tidy, 'tidy_means.txt', row.names = FALSE)
 
