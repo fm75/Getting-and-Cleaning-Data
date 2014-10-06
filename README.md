@@ -49,6 +49,7 @@ Activities Performed on this project
 
 
 ==============================
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/fm75/Getting-and-Cleaning-Data?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 >    train
 
